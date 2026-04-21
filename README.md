@@ -1,0 +1,2 @@
+# PhishShield
+PhishShield AI is a cybersecurity project designed to detect phishing websites using a hybrid approach of rule-based detection and machine learning. The system analyzes URLs for suspicious patterns and predicts whether a site is safe or malicious. It is deployed as a Flask web application and integrated with a Chrome extension for real-time detection and warning alerts while browsing.

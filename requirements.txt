@@ -1,0 +1,9 @@
+pandas
+scikit-learn
+flask
+numpy
+joblib
+python-whois
+tldextract
+whois
+flask-cors

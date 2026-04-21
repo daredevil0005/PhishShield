@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PhishShield AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🛡️ PhishShield AI</h1>
+    <p>Advanced Phishing Detection System</p>
+
+    <form method="POST">
+        <input type="text" name="url" placeholder="Enter URL (https://...)" required>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <div class="result {% if 'Phishing' in result %}phishing{% else %}safe{% endif %}">
+            {{ result }}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
