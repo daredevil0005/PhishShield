@@ -114,18 +114,6 @@ Result:
 
 ---
 
-## 🧪 Test URLs
-
-Phishing:
-http://secure-login-bank.com  
-http://verify-account-free-bonus.net  
-
-Safe:
-https://google.com  
-https://github.com  
-
----
-
 ## 🔧 Troubleshooting
 
 Extension not working:
