@@ -28,38 +28,6 @@ It includes:
 
 ---
 
-## 📂 Project Structure
-
-phishshield-ai/
-│
-├── app.py
-├── train-model.py
-├── requirements.txt
-│
-├── src/
-│   ├── predictor.py
-│   └── url_features.py
-│
-├── model/
-│   ├── phishing_model.pkl
-│   └── columns.json
-│
-├── templates/
-│   └── index.html
-│
-├── static/
-│   └── style.css
-│
-├── chrome-extension/
-│   ├── manifest.json
-│   ├── popup.html
-│   ├── popup.js
-│   ├── background.js
-│   ├── content.js
-│   └── PD.png
-
----
-
 ## ⚙️ Setup
 
 ### 1. Open project
