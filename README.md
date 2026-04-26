@@ -58,18 +58,6 @@ PhishShield helps detect and prevent such attacks in real time.
 
 ---
 
-## 📸 Demo
-
-*(Add screenshots here)*
-
-Example:
-
-* Extension popup
-* Detection result
-* Warning message
-
----
-
 ## ⚙️ Installation
 
 ```bash
