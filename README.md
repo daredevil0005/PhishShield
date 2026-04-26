@@ -1,148 +1,124 @@
 # 🛡️ PhishShield AI
 
-PhishShield AI is a **hybrid phishing detection system** that uses both:
-- Rule-based detection
-- Machine learning
+> 🚀 Real-time phishing detection using Chrome Extension + AI backend
 
-It includes:
-- Flask backend (API + model)
-- Chrome extension (real-time detection)
+![Python](https://img.shields.io/badge/Python-ML-blue)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Platform](https://img.shields.io/badge/Platform-Web+Extension-lightgrey)
+
+---
+
+## 🎯 Overview
+
+PhishShield AI is a **hybrid phishing detection system** that combines:
+
+* Rule-based detection
+* Machine learning
+
+It works as a **Chrome extension + Flask backend**, allowing real-time detection of malicious websites.
 
 ---
 
 ## 🚀 Features
 
-- Detect phishing URLs in real time
-- Chrome extension integration
-- Rule-based + ML detection
-- Warning alerts for malicious sites
-- Simple UI
+* 🔍 Detect phishing URLs in real time
+* 🌐 Chrome extension integration
+* 🧠 Hybrid detection (Rule-based + ML)
+* 🚨 Warning alerts for unsafe websites
+* ⚡ Fast and lightweight system
+
+---
+
+## 🧠 What Makes This Project Special
+
+* Real-world cybersecurity application
+* Works directly inside browser
+* Combines traditional rules + ML
+* Easily extendable to production systems
+
+---
+
+## 🔐 Why This Project Matters
+
+Phishing attacks are one of the most common cyber threats used to steal:
+
+* Passwords
+* Banking details
+* Personal data
+
+PhishShield helps detect and prevent such attacks in real time.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python (Flask, scikit-learn)
-- JavaScript (Chrome Extension)
-- HTML/CSS
+* Python (Flask, scikit-learn)
+* JavaScript (Chrome Extension)
+* HTML / CSS
 
 ---
 
-## ⚙️ Setup
+## 📸 Demo
 
-### 1. Open project
+*(Add screenshots here)*
 
-cd phishshield-ai
+Example:
 
----
-
-### 2. Create virtual environment
-
-python -m venv venv
+* Extension popup
+* Detection result
+* Warning message
 
 ---
 
-### 3. Activate environment
+## ⚙️ Installation
 
-Windows:
-venv\Scripts\activate
-
-Mac/Linux:
-source venv/bin/activate
-
----
-
-### 4. Install dependencies
-
+```bash
+git clone https://github.com/daredevil0005/PhishShield.git
+cd PhishShield
 pip install -r requirements.txt
-
----
-
-### 5. Train model
-
 python train-model.py
-
----
-
-### 6. Run backend
-
 python app.py
-
-Server runs on:
-http://127.0.0.1:5000
+```
 
 ---
 
 ## 🌐 Chrome Extension Setup
 
-1. Open Chrome  
-2. Go to: chrome://extensions/  
-3. Enable Developer Mode  
-4. Click “Load unpacked”  
-5. Select `chrome-extension/`
+1. Open Chrome → `chrome://extensions/`
+2. Enable Developer Mode
+3. Click “Load unpacked”
+4. Select `chrome-extension/` folder
 
 ---
 
-## ▶️ How to Use
+## ▶️ How It Works
 
-1. Open any website  
-2. Click extension  
-3. Click “Check Website”  
+1. Extension captures current URL
+2. Sends request to Flask backend
+3. Backend extracts features
+4. Rule-based + ML analysis runs
+5. Result returned
+6. Extension displays:
 
-Result:
-- ✅ Safe
-- 🚨 Phishing
-
----
-
-## 🧠 How It Works
-
-1. Extension gets current URL  
-2. Sends it to Flask API  
-3. Backend extracts features  
-4. Rule-based detection runs  
-5. ML model predicts  
-6. Result returned  
-7. Extension shows output  
-
----
-
-## ⚠️ Important
-
-- You must run `app.py` while using extension  
-- Reload extension after changes  
-
----
-
-## 🔧 Troubleshooting
-
-Extension not working:
-- Make sure backend is running
-
-No response:
-- Install flask-cors
-- Add CORS(app) in app.py
-
-Model issue:
-- Run train-model.py again
+   * ✅ Safe
+   * 🚨 Phishing
 
 ---
 
 ## 🚀 Future Improvements
 
-- Deploy backend online
-- Auto block phishing sites
-- Improve ML accuracy
-- Add blacklist API
+* Deploy backend online
+* Auto-block phishing websites
+* Improve ML accuracy
+* Add threat intelligence APIs
 
 ---
 
 ## 👨‍💻 Author
 
-Pratik S. Dabhane
+**Pratik S. Dabhane**
 
 ---
 
-## 🎯 Summary
+⭐ If you like this project, give it a star!
 
-PhishShield AI demonstrates how phishing detection can be built using a hybrid approach of rules and machine learning, integrated into a real-time browser extension.
