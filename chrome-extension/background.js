@@ -8,9 +8,22 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       },
       body: JSON.stringify({ url: tab.url })
     })
-    .then(res => res.json())
-    .then(data => {
-      if (data.result.includes("Phishing")) {
+    .then(async (res) => {
+      const text = await res.text();
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch {
+        throw new Error("Non-JSON response");
+      }
+      if (!res.ok) {
+        throw new Error(data.error || res.statusText || "Request failed");
+      }
+      return data;
+    })
+    .then((data) => {
+      const result = data && typeof data.result === "string" ? data.result : "";
+      if (result.includes("Phishing")) {
 
         chrome.scripting.executeScript({
           target: { tabId: tabId },
@@ -31,7 +44,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
             document.body.prepend(warning);
           },
-          args: [data.result]
+          args: [result]
         });
 
       }

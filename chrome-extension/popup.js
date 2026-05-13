@@ -11,8 +11,23 @@ document.getElementById("checkBtn").addEventListener("click", async () => {
       body: JSON.stringify({ url: url })
     });
 
-    const data = await response.json();
-    document.getElementById("result").innerText = data.result;
+    const text = await response.text();
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch {
+      document.getElementById("result").innerText = "Invalid response from server";
+      return;
+    }
+
+    if (!response.ok) {
+      const msg = (data && data.error) || response.statusText || "Request failed";
+      document.getElementById("result").innerText = msg;
+      return;
+    }
+
+    const result = data && typeof data.result === "string" ? data.result : "No result";
+    document.getElementById("result").innerText = result;
 
   } catch (err) {
     console.error(err);
