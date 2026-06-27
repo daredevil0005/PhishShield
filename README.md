@@ -63,6 +63,8 @@ PhishShield helps detect and prevent such attacks in real time.
 ```bash
 git clone https://github.com/daredevil0005/PhishShield.git
 cd PhishShield
+python -m venv venv
+.\venv\Scripts\activate
 pip install -r requirements.txt
 python train-model.py
 python app.py
